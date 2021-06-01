@@ -42,7 +42,7 @@ function change2multi{
        type             = 1
    }
    
-   
+   $build.variables.BuildConfiguration.value = "Debug,Release"
    
    $build = Get-VSTeamBuildDefinition -ProjectName payoneer -Id $build_id -Raw
    $build.process.phases.target.executionOptions = $multi
